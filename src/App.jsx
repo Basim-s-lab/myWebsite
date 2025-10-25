@@ -2,7 +2,7 @@ import React from "react";
 function App() {
   return (
     <>
-      <header className="flex justify-between py-4 px-8">
+      <header className="flex justify-between px-8 py-4">
         <div>Logo</div>
         <nav>
           <ul className="flex space-x-4">
