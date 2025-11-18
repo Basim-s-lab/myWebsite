@@ -1,1 +1,45 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+.bar {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  margin: 5px 0;
+}
+
+.dark .bar {
+  background-color: #ddd;
+}
+
+.hamburger:hover .bar,
+.hamburger:active .bar {
+  background-color: #10b981; /* Tailwind's emerald-500 color */
+}
+
+.active:nth-child(1) {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.active:nth-child(2) {
+  opacity: 0;
+}
+
+.active:nth-child(3) {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+.hamburger.active .bar {
+  transition: all 0.3s ease;
+}
+.hamburger .bar {
+  transition: all 0.3s ease;
+}
