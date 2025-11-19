@@ -27,19 +27,19 @@ body,
 }
 
 .active:nth-child(1) {
-  transform: rotate(-45deg) translate(-8px, 8px);
+  transform: rotate(-45deg) translate(-2px, 5px);
 }
 
 .active:nth-child(2) {
-  opacity: 0;
+  display: none;
 }
 
 .active:nth-child(3) {
-  transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-1px, -4px);
 }
-.hamburger.active .bar {
+/* .hamburger.active .bar {
   transition: all 0.3s ease;
 }
 .hamburger .bar {
   transition: all 0.3s ease;
-}
+} */

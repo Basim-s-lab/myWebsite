@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Sun, Moon } from "lucide-react";
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   useEffect(() => {
     localStorage.setItem("theme", theme);
     document.documentElement.classList.toggle("dark", theme === "dark");
@@ -19,7 +19,7 @@ function App() {
 
   const themeClasses =
     theme === "light" ? "bg-white text-gray-900" : "bg-gray-900 text-white";
-
+  const mobileMenuClasses = isMenuOpen ? "active" : "";
   return (
     <>
       <header
@@ -54,12 +54,42 @@ function App() {
           >
             {theme === "light" ? <Moon /> : <Sun />}
           </button>
-          <div className="hamburger self-center">
-            <span className="bar hover:bg-emerald-500"></span>
-            <span className="bar hover:bg-emerald-500"></span>
-            <span className="bar hover:bg-emerald-500"></span>
+          <div
+            className="hamburger justify-start self-center"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <span
+              className={`${mobileMenuClasses} bar hover:bg-emerald-500`}
+            ></span>
+            <span
+              className={`${mobileMenuClasses} bar hover:bg-emerald-500`}
+            ></span>
+            <span
+              className={`${mobileMenuClasses} bar hover:bg-emerald-500`}
+            ></span>
           </div>
         </div>
+        {isMenuOpen && (
+          <div className="mobile-menu absolute top-16 left-0 w-full border-t border-gray-200 bg-white shadow-md md:hidden dark:border-slate-700 dark:bg-gray-800">
+            <ul className="flex flex-col gap-2">
+              <li className="block w-full border-t border-gray-200 px-3 pt-2 text-left text-gray-700 transition-colors duration-200 hover:text-emerald-400 dark:text-gray-300 dark:hover:text-emerald-400">
+                <a href="#home">Home</a>
+              </li>
+              <li className="block w-full px-3 text-left text-gray-700 transition-colors duration-200 hover:text-emerald-400 dark:text-gray-300 dark:hover:text-emerald-400">
+                <a href="#about">About</a>
+              </li>
+              <li className="block w-full px-3 text-left text-gray-700 transition-colors duration-200 hover:text-emerald-400 dark:text-gray-300 dark:hover:text-emerald-400">
+                <a href="#skills">Skills</a>
+              </li>
+              <li className="block w-full px-3 text-left text-gray-700 transition-colors duration-200 hover:text-emerald-400 dark:text-gray-300 dark:hover:text-emerald-400">
+                <a href="#projects">Projects</a>
+              </li>
+              <li className="block w-full px-3 pb-2 text-left text-gray-700 transition-colors duration-200 hover:text-emerald-400 dark:text-gray-300 dark:hover:text-emerald-400">
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        )}
       </header>
     </>
   );
