@@ -19,7 +19,7 @@ function App() {
   }, [theme]);
 
   const themeClasses =
-    theme === "light" ? "bg-white text-gray-900" : "bg-gray-900 text-gray-100";
+    theme === "light" ? "bg-white text-gray-900" : "bg-gray-900 text-gray-300";
   const mobileMenuClasses = isMenuOpen ? "active" : "";
   return (
     <>

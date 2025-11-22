@@ -20,29 +20,31 @@ function Navigation({
   }, []);
   return (
     <header
-      className={`flex justify-between border-b border-b-emerald-500 px-8 py-4 transition-all ease-in-out dark:border-b-gray-400 ${isScrolled ? "bg-slate-900/90 text-gray-400 shadow-lg backdrop-blur-md dark:bg-slate-900/90" : "bg-white/90 backdrop-blur-md dark:bg-slate-900/90"} `}
+      className={`border-b border-b-emerald-500 px-8 py-4 transition-all ease-in-out dark:border-b-gray-400 ${isScrolled ? "bg-slate-900/90 text-gray-400 shadow-lg backdrop-blur-md dark:bg-slate-900/90" : "bg-white/90 backdrop-blur-md dark:bg-slate-900/90"} `}
     >
-      <div className="text-emerald-400">Logo</div>
-      <nav className="hidden items-center gap-6 md:flex">
-        <ul className="flex space-x-4">
-          <li className="hover:text-emerald-400">
-            <a href="#home">Home</a>
-          </li>
-          <li className="hover:text-emerald-400">
-            <a href="#about">About</a>
-          </li>
-          <li className="hover:text-emerald-400">
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-        <button
-          onClick={toggleTheme}
-          className="cursor-pointer rounded-full p-2 transition-all ease-in-out hover:bg-gray-200 hover:text-emerald-400 dark:text-gray-400 dark:hover:bg-gray-700"
-          aria-label="Toggle Theme"
-        >
-          {theme === "light" ? <Moon /> : <Sun />}
-        </button>
-      </nav>
+      <div className="lg-px-8 mx-auto flex max-w-6xl justify-between px-4 sm:px-6">
+        <div className="text-emerald-400">Logo</div>
+        <nav className="hidden items-center gap-6 md:flex">
+          <ul className="flex space-x-4">
+            <li className="hover:text-emerald-400">
+              <a href="#home">Home</a>
+            </li>
+            <li className="hover:text-emerald-400">
+              <a href="#about">About</a>
+            </li>
+            <li className="hover:text-emerald-400">
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+          <button
+            onClick={toggleTheme}
+            className="cursor-pointer rounded-full p-2 transition-all ease-in-out hover:bg-gray-200 hover:text-emerald-400 dark:text-gray-400 dark:hover:bg-gray-700"
+            aria-label="Toggle Theme"
+          >
+            {theme === "light" ? <Moon /> : <Sun />}
+          </button>
+        </nav>
+      </div>
       <div className="bar-container flex cursor-pointer justify-center gap-1 md:hidden">
         <button
           onClick={toggleTheme}
