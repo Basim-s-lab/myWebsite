@@ -77,3 +77,26 @@ header {
 .hover-scale:hover {
   transform: scale(1.05);
 }
+
+.skill-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.skill-dot.active-dot {
+  background-color: hsl(160, 84%, 39%);
+}
+
+.skill-dot.inactive-dot {
+  background-color: hsl(215, 14%, 44%);
+}
+
+.dark .skill-dot.active-dot {
+  background-color: hsl(158, 64%, 52%);
+}
+
+.dark .skill-dot.inactive-dot {
+  background-color: hsl(215, 14%, 44%);
+}
