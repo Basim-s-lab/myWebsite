@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Navigation from "./components/navigation";
 import HeroSection from "./components/hero-section";
 import AboutSection from "./components/about-section";
+import SkillsSection from "./components/skills-section";
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,6 +37,7 @@ function App() {
         />
         <HeroSection />
         <AboutSection />
+        <SkillsSection />
       </div>
     </>
   );
