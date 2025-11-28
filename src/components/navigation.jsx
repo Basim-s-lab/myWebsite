@@ -8,13 +8,6 @@ function Navigation({
   setIsMenuOpen,
   mobileMenuClasses,
 }) {
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-    setIsMenuOpen(false);
-  };
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -30,33 +23,23 @@ function Navigation({
       className={`flex justify-center border-b border-b-emerald-500 px-8 py-4 transition-all ease-in-out dark:border-b-gray-400 ${isScrolled ? "bg-slate-900/90 text-gray-400 shadow-lg backdrop-blur-md dark:bg-slate-900/90" : "bg-white/90 backdrop-blur-md dark:bg-slate-900/90"} `}
     >
       <div className="lg-px-8 flex w-full max-w-6xl justify-between px-4 sm:px-6">
-        <div className="text-emerald-400">Logo</div>
+        <div className="inline-flex items-center text-emerald-400">Logo</div>
         <nav className="hidden items-center gap-6 md:flex">
           <ul className="flex space-x-4">
             <li className="hover:text-emerald-400">
-              <a href="#home" onClick={() => scrollToSection("home")}>
-                Home
-              </a>
+              <a href="#home">Home</a>
             </li>
             <li className="hover:text-emerald-400">
-              <a href="#about" onClick={() => scrollToSection("about")}>
-                About
-              </a>
+              <a href="#about">About</a>
             </li>
             <li className="hover:text-emerald-400">
-              <a href="#skills" onClick={() => scrollToSection("skills")}>
-                Skills
-              </a>
+              <a href="#skills">Skills</a>
             </li>
             <li className="hover:text-emerald-400">
-              <a href="#projects" onClick={() => scrollToSection("projects")}>
-                Projects
-              </a>
+              <a href="#projects">Projects</a>
             </li>
             <li className="hover:text-emerald-400">
-              <a href="#contact" onClick={() => scrollToSection("contact")}>
-                Contact
-              </a>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
           <button
@@ -95,29 +78,19 @@ function Navigation({
         <div className="mobile-menu absolute top-16 left-0 w-full border-t border-gray-200 bg-white shadow-md md:hidden dark:border-slate-700 dark:bg-gray-800">
           <ul className="flex flex-col gap-2">
             <li className="block w-full border-t border-gray-200 px-3 pt-2 text-left text-gray-700 transition-colors duration-200 hover:text-emerald-400 dark:text-gray-300 dark:hover:text-emerald-400">
-              <a href="#home" onClick={() => scrollToSection("home")}>
-                Home
-              </a>
+              <a href="#home">Home</a>
             </li>
             <li className="block w-full px-3 text-left text-gray-700 transition-colors duration-200 hover:text-emerald-400 dark:text-gray-300 dark:hover:text-emerald-400">
-              <a href="#about" onClick={() => scrollToSection("about")}>
-                About
-              </a>
+              <a href="#about">About</a>
             </li>
             <li className="block w-full px-3 text-left text-gray-700 transition-colors duration-200 hover:text-emerald-400 dark:text-gray-300 dark:hover:text-emerald-400">
-              <a href="#skills" onClick={() => scrollToSection("skills")}>
-                Skills
-              </a>
+              <a href="#skills">Skills</a>
             </li>
             <li className="block w-full px-3 text-left text-gray-700 transition-colors duration-200 hover:text-emerald-400 dark:text-gray-300 dark:hover:text-emerald-400">
-              <a href="#projects" onClick={() => scrollToSection("projects")}>
-                Projects
-              </a>
+              <a href="#projects">Projects</a>
             </li>
             <li className="block w-full px-3 pb-2 text-left text-gray-700 transition-colors duration-200 hover:text-emerald-400 dark:text-gray-300 dark:hover:text-emerald-400">
-              <a href="#contact" onClick={() => scrollToSection("contact")}>
-                Contact
-              </a>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </div>
