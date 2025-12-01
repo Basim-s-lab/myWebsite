@@ -24,7 +24,7 @@ function Navigation({
       className={`flex justify-center border-b border-b-emerald-500 px-8 py-4 transition-all ease-in-out dark:border-b-gray-400 ${isScrolled ? "bg-slate-900/90 text-gray-400 shadow-lg backdrop-blur-md dark:bg-slate-900/90" : "bg-white/90 backdrop-blur-md dark:bg-slate-900/90"} `}
     >
       <div className="lg-px-8 flex w-full max-w-6xl justify-between px-4 sm:px-6">
-        <div className="inline-flex w-6 items-center rounded-full p-1 text-emerald-400 transition-colors duration-200 hover:bg-gray-200 dark:hover:bg-gray-700">
+        <div className="inline-flex w-6 items-center rounded-full text-emerald-400 transition-colors duration-200 hover:bg-gray-200 dark:hover:bg-gray-700">
           <a href="#home">
             <Logo
               className={`h-6 w-6`}
