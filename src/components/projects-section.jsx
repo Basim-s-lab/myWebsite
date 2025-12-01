@@ -1,6 +1,11 @@
 import Badge from "./ui/badge";
 import { Github, ExternalLink } from "lucide-react";
 import bookishImage from "../Bookish.svg";
+import myWorldImage from "../my-world.svg";
+import foodoImage from "../foodo.svg";
+import spaceHubImage from "../Space-Travelers-Hub.svg";
+import holaImage from "../hola-app.svg";
+import goMovieImage from "../go-movie.svg";
 export default function ProjectsSection() {
   const projects = [
     {
@@ -9,7 +14,7 @@ export default function ProjectsSection() {
       description:
         "This project is about building a mobile web application to compare metrics from different countries. This project utilizes an API to retrieve information about countries and continents, which is then displayed through the use of React functions.",
       technologies: ["React", "Redux", "CSS"],
-      image: "./src/assets/my-world.svg",
+      image: myWorldImage,
       liveLink: "https://my-world-sems.onrender.com/",
       githubUrl: "https://github.com/ShiroYaksha90/react-redux-capstone",
     },
@@ -19,7 +24,7 @@ export default function ProjectsSection() {
       description:
         "Foodo is a full-Stack application built with Ruby on Rails. It allows users to create, edit, and delete their own unique recipes. Users can also add ingredients, and follow step-by-step cooking instructions. The app features user authentication, and a responsive design for an optimal user experience",
       technologies: ["Ruby on Rails", "Bootstrap", "Rspec", "Postgres"],
-      image: "./src/assets/foodo.svg",
+      image: foodoImage,
       liveLink: "https://foodo.onrender.com/",
       githubUrl: "https://github.com/ShiroYaksha90/Foodo",
     },
@@ -39,7 +44,7 @@ export default function ProjectsSection() {
       description:
         "Space Hub utilizes the SpaceX API to fetch information about the various spaceships details and allow visitors to join the various missions. It's built with the React framework to utilize the fluidity of SPA's and Redux for state management.",
       technologies: ["React", "Redux", "CSS"],
-      image: "./src/assets/Space-Travelers-Hub.svg",
+      image: spaceHubImage,
       liveLink: "https://space-hub-osb.netlify.app/",
       githubUrl: "https://github.com/ShiroYaksha90/space-hub-traveler",
     },
@@ -49,7 +54,7 @@ export default function ProjectsSection() {
       description:
         "Hola is a full stack social app that allows users to sign up, log in, follow/unfollow other users, and create posts. It let's users activate their account, change their password via email using a hashed token.",
       technologies: ["Ruby on Rails", "Postgres", "Bootstrap", "Hotwire"],
-      image: "./src/assets/hola-app.svg",
+      image: holaImage,
       liveLink: "https://hola-fvhk.onrender.com/",
       githubUrl: "https://github.com/ShiroYaksha90/hola",
     },
@@ -59,7 +64,7 @@ export default function ProjectsSection() {
       description:
         "Go Movies is a simple web app that fetches and stores data in multiple APIs and displays them, it uses modular architecture as well as webpack.",
       technologies: ["Javascript", "Webpack", "CSS"],
-      image: "./src/assets/go-movie.svg",
+      image: goMovieImage,
       liveLink: "https://dheerajsachdeva.github.io/capstone2/dist/",
       githubUrl: "https://github.com/ShiroYaksha90/javascript-capstone",
     },
