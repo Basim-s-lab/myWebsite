@@ -1,5 +1,6 @@
 import Badge from "./ui/badge";
 import { Github, ExternalLink } from "lucide-react";
+import bookishImage from "../Bookish.svg";
 export default function ProjectsSection() {
   const projects = [
     {
@@ -28,7 +29,7 @@ export default function ProjectsSection() {
       description:
         "ookstore is a web app that allows users to add, remove, and display books. The app is built with React and Redux. It also uses an external API to store and retrieve data",
       technologies: ["React", "Redux", "CSS"],
-      image: "./src/assets/Bookish.svg",
+      image: bookishImage,
       liveLink: "https://book-store-jigy.onrender.com/",
       githubUrl: "https://github.com/ShiroYaksha90/bookstore-react",
     },
