@@ -134,6 +134,7 @@ export default function ProjectsSection() {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={`Link to the GitHub repository of ${project.title}`}
                     >
                       <Github className="mr-2 h-4 w-4" />
                       Code
@@ -143,6 +144,7 @@ export default function ProjectsSection() {
                       href={project.liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={`Link to the live demo of ${project.title}`}
                     >
                       <ExternalLink className="mr-2 h-4 w-4" />
                       Live Demo

@@ -66,6 +66,7 @@ export default function HeroSection() {
                 href="https://github.com/ShiroYaksha90"
                 target="_blank"
                 className={`${socialClasses}`}
+                aria-label="Link to Basim Aljazaeri's Github repository"
               >
                 <Github />
               </a>
@@ -73,6 +74,7 @@ export default function HeroSection() {
                 href="https://www.linkedin.com/in/basimaljazaeri/"
                 target="_blank"
                 className={`${socialClasses}`}
+                aria-label="Link to Basim Aljazaeri's Linkedin profile"
               >
                 <Linkedin />
               </a>
@@ -80,6 +82,7 @@ export default function HeroSection() {
                 href="https://x.com/basimcode"
                 target="_blank"
                 className={`${socialClasses}`}
+                aria-label="Link to Basim Aljazaeri's Twitter profile"
               >
                 <Twitter />
               </a>

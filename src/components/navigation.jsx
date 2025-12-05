@@ -25,7 +25,7 @@ function Navigation({
     >
       <div className="lg-px-8 flex w-full max-w-6xl justify-between px-4 sm:px-6">
         <div className="inline-flex w-6 items-center rounded-full text-emerald-400 transition-colors duration-200 hover:bg-gray-200 dark:hover:bg-gray-700">
-          <a href="#home">
+          <a href="#home" aria-label="Home">
             <Logo
               className={`h-6 w-6`}
               fill={theme === "light" ? "#00d390" : "#d1d5dc"}
