@@ -72,18 +72,18 @@ export default function ProjectsSection() {
 
   const getTechBadgeColor = (tech) => {
     const colorMap = {
-      React: "bg-blue-500/20 text-emerald-400",
-      Redux: "bg-emerald-500/20 text-emerald-400",
-      Javascript: "bg-orange-500/20 text-orange-400",
-      "Ruby on Rails": "bg-red-500/20 text-red-400",
-      Postgres: "bg-purple-500/20 text-purple-400",
-      Bootstrap: "bg-purple-400 textpurple-500",
-      Rspec: "bg-yellow-500/20 text-yellow-400",
-      CSS: "bg-green-500/20 text-green-400",
+      React: "bg-blue-500/20 text-emerald-700 dark:text-emerald-200",
+      Redux: "bg-emerald-500/20 text-emerald-600 dark:text-emerald-200",
+      Javascript: "bg-orange-500/20 text-orange-600 dark:text-orange-200",
+      "Ruby on Rails": "bg-red-500/25 text-red-700 dark:text-white",
+      Postgres: "bg-purple-500/20 text-purple-700 dark:text-purple-200",
+      Bootstrap: "bg-indigo-500/20 text-purple-500 dark:text-purple-200",
+      Rspec: "bg-yellow-500/20 text-yellow-600 dark:text-yellow-200",
+      CSS: "bg-green-500/20 text-green-600 dark:text-green-200",
       "Tailwind CSS": "bg-sky-500/20 text-sky-400",
       "Express.js": "bg-orange-500/20 text-orange-400",
       "Node.js": "bg-lime-500/20 text-lime-400",
-      Hotwire: "bg-red-500/20 text-red-400",
+      Hotwire: "bg-pink-500/20 text-teal-600 dark:text-teal-200",
     };
     return colorMap[tech] || "bg-gray-200 text-gray-600";
   };
