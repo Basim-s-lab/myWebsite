@@ -110,6 +110,7 @@ export default function ProjectsSection() {
                   className="h-48 w-full object-cover"
                   src={project.image}
                   alt={project.title}
+                  loading="lazy"
                 />
                 <div className="p-6">
                   <h3 className="mb-2 text-xl font-semibold text-emerald-600 dark:text-emerald-400">

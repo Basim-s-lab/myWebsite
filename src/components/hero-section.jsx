@@ -90,6 +90,7 @@ export default function HeroSection() {
               className="mx-auto h-64 w-64 rounded-full border-4 border-emerald-400/20 object-cover shadow-2xl sm:h-80 sm:w-80"
               src="https://avatars.githubusercontent.com/u/30289772?s=400&u=6655f2e98a0b24d79f07cedd0ca66c35a1b59ff4&v=4"
               alt="personal avatar"
+              loading="lazy"
             />
           </div>
         </div>
