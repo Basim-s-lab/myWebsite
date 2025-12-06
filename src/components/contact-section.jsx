@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
+import Form from "./ui/form.jsx";
 
 export default function ContactSection() {
   const contactClasses = "text-emerald-400 text-2xl";
@@ -39,6 +40,10 @@ export default function ContactSection() {
       label: "Link to Basim Aljazaeri's Twitter profile",
     },
   ];
+  //   const handleSubmit = (e) => {
+  //     e.preventDefault();
+  //     // Handle form submission logic here
+  //   };
   return (
     <section id="contact" className="bg-white py-20 dark:bg-slate-900">
       <div className="lg-px-8 mx-auto max-w-6xl px-4 sm:px-6">
@@ -101,7 +106,9 @@ export default function ContactSection() {
               </div>
             </div>
           </div>
-          <div className="animate-fade-in-up"></div>
+          <div className="animate-fade-in-up">
+            <Form />
+          </div>
         </div>
       </div>
     </section>
