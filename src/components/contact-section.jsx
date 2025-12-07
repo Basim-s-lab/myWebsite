@@ -1,45 +1,47 @@
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import Form from "./ui/form.jsx";
+import SocialLinks from "./ui/socialLinks.jsx";
 
 export default function ContactSection() {
   const contactClasses = "text-emerald-400 text-2xl";
   const socialClasses =
     "w-10 h-10 bg-gray-100 dark:bg-slate-700 rounded-lg flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-emerald-500 hover:text-white transition-colors duration-200";
+
   const contactInfo = [
     {
-      icon: <Mail className={`${contactClasses}`} />,
+      icon: <Mail className={contactClasses} />,
       title: "Email",
       value: "aljazaeribasim@gmail.com",
     },
     {
-      icon: <Phone className={`${contactClasses}`} />,
+      icon: <Phone className={contactClasses} />,
       title: "Phone",
       value: "+964 7854 701 930",
     },
     {
-      icon: <MapPin className={`${contactClasses}`} />,
+      icon: <MapPin className={contactClasses} />,
       title: "Location",
       value: "Baghdad, Iraq",
     },
   ];
 
-  const sociallinks = [
-    {
-      icon: <Github />,
-      url: "https://github.com/ShiroYaksha90",
-      label: "Link to Basim Aljazaeri's Github repository",
-    },
-    {
-      icon: <Linkedin />,
-      url: "https://www.linkedin.com/in/basimaljazaeri",
-      label: "Link to Basim Aljazaeri's Linkedin profile",
-    },
-    {
-      icon: <Twitter />,
-      url: "https://x.com/basimcode",
-      label: "Link to Basim Aljazaeri's Twitter profile",
-    },
-  ];
+  // const sociallinks = [
+  //   {
+  //     icon: <Github />,
+  //     url: "https://github.com/ShiroYaksha90",
+  //     label: "Link to Basim Aljazaeri's Github repository",
+  //   },
+  //   {
+  //     icon: <Linkedin />,
+  //     url: "https://www.linkedin.com/in/basimaljazaeri",
+  //     label: "Link to Basim Aljazaeri's Linkedin profile",
+  //   },
+  //   {
+  //     icon: <Twitter />,
+  //     url: "https://x.com/basimcode",
+  //     label: "Link to Basim Aljazaeri's Twitter profile",
+  //   },
+  // ];
   //   const handleSubmit = (e) => {
   //     e.preventDefault();
   //     // Handle form submission logic here
@@ -90,19 +92,7 @@ export default function ContactSection() {
                 Follow Me
               </h4>
               <div className="flex space-x-4">
-                {sociallinks.map((social, index) => {
-                  return (
-                    <a
-                      key={index}
-                      href={social.url}
-                      target="_blank"
-                      className={socialClasses}
-                      aria-label={social.label}
-                    >
-                      {social.icon}
-                    </a>
-                  );
-                })}
+                <SocialLinks className={socialClasses} />
               </div>
             </div>
           </div>
