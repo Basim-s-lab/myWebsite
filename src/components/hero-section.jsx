@@ -1,5 +1,6 @@
 import Button from "./ui/button.jsx";
-import { Linkedin, Github, Twitter } from "lucide-react";
+import SocialLinks from "./ui/socialLinks.jsx";
+import SocialSection from "./ui/socialLinks.jsx";
 
 export default function HeroSection() {
   const socialClasses =
@@ -62,30 +63,7 @@ export default function HeroSection() {
               />
             </div>
             <div className="social mt-8 flex space-x-6">
-              <a
-                href="https://github.com/ShiroYaksha90"
-                target="_blank"
-                className={`${socialClasses}`}
-                aria-label="Link to Basim Aljazaeri's Github repository"
-              >
-                <Github />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/basimaljazaeri/"
-                target="_blank"
-                className={`${socialClasses}`}
-                aria-label="Link to Basim Aljazaeri's Linkedin profile"
-              >
-                <Linkedin />
-              </a>
-              <a
-                href="https://x.com/basimcode"
-                target="_blank"
-                className={`${socialClasses}`}
-                aria-label="Link to Basim Aljazaeri's Twitter profile"
-              >
-                <Twitter />
-              </a>
+              <SocialLinks className={socialClasses} />
             </div>
           </div>
           <div className="animate-fade-in lg:text-center">
